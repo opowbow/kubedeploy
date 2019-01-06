@@ -1,0 +1,51 @@
+
+# Due to some Azure limitations (ex:- Storage Account's name must be unique),
+# this name must be globally unique - it will be used as a prefix for azure components
+cluster_name: opk8s1
+
+# Set this to true if you do not want to have public IPs for your masters and minions. This will provision a bastion
+# node that can be used to access the masters and minions
+use_bastion: true
+
+# Set this to a prefered name that will be used as the first part of the dns name for your bastotion host. For example: k8s-bastion.<azureregion>.cloudapp.azure.com.
+# This is convenient when exceptions have to be configured on a firewall to allow ssh to the given bastion host.
+bastion_domain_prefix: k8s-bastion
+
+number_of_k8s_masters: 1
+number_of_k8s_nodes: 2
+
+masters_vm_size: Standard_A2
+masters_os_disk_size: 1000
+
+minions_vm_size: Standard_A2
+minions_os_disk_size: 1000
+
+admin_username: testadmin
+admin_password: Passw0rd1!
+
+# MAKE SURE TO CHANGE THIS TO YOUR PUBLIC KEY to access your azure machines
+ssh_public_keys:
+ - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9wIpdYBfenATBgIEZnhgE12dpRV09pyIB2h2UkjUPQ1c4uFSSBHAZ3g5O+sUp55x6zotUHnPbSdlXgcgkA6ioglmh/vLr6334+Z/OXcwkmSyth1AvyrwNACmlpDTrWkUyw+jq1wBd4BGa8QVAwj0xzNI+uXuYzMU6WDGeZZEnq+UPPiCgjMMhKkfUFAJKYc5u6gaztVhZDkh+9rKgfKzY5//FE/9mtkIWGixCyEQ8pjD/8J9D2JP0zySJuDys1h77YI7LwVEfBz3SVCwYR1VRRaIF10mQ4Q5B3k9RGMEnd/yPL+BelqTG/zwg1U5wg9ZoDnb1eosk9oBD+++FpKO5 opower@olives-MBP.lan"
+
+# Disable using ssh using password. Change it to false to allow to connect to ssh by password
+disablePasswordAuthentication: true
+
+# Azure CIDRs
+azure_vnet_cidr: 10.0.0.0/8
+azure_admin_cidr: 10.241.2.0/24
+azure_masters_cidr: 10.0.4.0/24
+azure_minions_cidr: 10.240.0.0/16
+
+# Azure loadbalancer port to use to access your cluster
+kube_apiserver_port: 6443
+
+# Azure Netwoking and storage naming to use with inventory/all.yml
+#azure_virtual_network_name: KubeVNET
+#azure_subnet_admin_name: ad-subnet
+#azure_subnet_masters_name: master-subnet
+#azure_subnet_minions_name: node-subnet
+#azure_route_table_name: routetable
+#azure_security_group_name: secgroup
+
+# Storage types available are: "Standard_LRS","Premium_LRS"
+#azure_storage_account_type: Standard_LRS
