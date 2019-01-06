@@ -3,6 +3,7 @@
 # this name must be globally unique - it will be used as a prefix for azure components
 cluster_name: opk8s1
 
+
 # Set this to true if you do not want to have public IPs for your masters and minions. This will provision a bastion
 # node that can be used to access the masters and minions
 use_bastion: true
