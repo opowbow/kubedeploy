@@ -25,7 +25,7 @@ admin_password: Passw0rd1!
 
 # MAKE SURE TO CHANGE THIS TO YOUR PUBLIC KEY to access your azure machines
 ssh_public_keys:
- - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9wIpdYBfenATBgIEZnhgE12dpRV09pyIB2h2UkjUPQ1c4uFSSBHAZ3g5O+sUp55x6zotUHnPbSdlXgcgkA6ioglmh/vLr6334+Z/OXcwkmSyth1AvyrwNACmlpDTrWkUyw+jq1wBd4BGa8QVAwj0xzNI+uXuYzMU6WDGeZZEnq+UPPiCgjMMhKkfUFAJKYc5u6gaztVhZDkh+9rKgfKzY5//FE/9mtkIWGixCyEQ8pjD/8J9D2JP0zySJuDys1h77YI7LwVEfBz3SVCwYR1VRRaIF10mQ4Q5B3k9RGMEnd/yPL+BelqTG/zwg1U5wg9ZoDnb1eosk9oBD+++FpKO5 opower@olives-MBP.lan"
+ - "ssh-rsa KEYKEYKEY"
 
 # Disable using ssh using password. Change it to false to allow to connect to ssh by password
 disablePasswordAuthentication: true
