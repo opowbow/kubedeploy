@@ -1,3 +1,3 @@
 # kubedeploy
 
-This is a collection of K8s deployment methods
+This is a collection of K8s deployment methods - Azure first
